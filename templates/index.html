@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Font Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 4.5rem;
+      }
+      .keyword-btn {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">AI Font Generator</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="bg-light p-5 rounded">
+        <h1>Generate Your Own Font</h1>
+        <p class="lead">Select keywords that describe the font style you want to create. Our AI will generate a unique font for you.</p>
+        
+        <div class="mb-3">
+            <label for="keywordInput" class="form-label">Or enter your own keywords:</label>
+            <input type="text" class="form-control" id="keywordInput" placeholder="e.g., modern, elegant, futuristic">
+        </div>
+
+        <div id="keyword-selection" class="mb-3">
+            <h5>Choose from popular keywords:</h5>
+            <button type="button" class="btn btn-primary keyword-btn">Modern</button>
+            <button type="button" class="btn btn-primary keyword-btn">Elegant</button>
+            <button type="button" class="btn btn-primary keyword-btn">Futuristic</button>
+            <button type="button" class="btn btn-primary keyword-btn">Playful</button>
+            <button type="button" class="btn btn-primary keyword-btn">Minimalist</button>
+            <button type="button" class="btn btn-primary keyword-btn">Classic</button>
+        </div>
+
+        <a href="#" class="btn btn-lg btn-success" id="generate-btn">Generate Font &raquo;</a>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>Generated Font Preview</h2>
+            <div class="p-3 bg-white border rounded">
+                <h3 id="font-preview-text" style="font-family: 'GeneratedFont', sans-serif;">The quick brown fox jumps over the lazy dog</h3>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
